@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://baravalle.com/sitemap.xml
