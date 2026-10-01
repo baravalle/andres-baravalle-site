@@ -1,7 +1,6 @@
 # Python
 __pycache__/
-*.py[cod]
-*.pyo
+*.py*
 
 # Virtual environments
 .venv/
@@ -21,6 +20,9 @@ env/
 .DS_Store
 Thumbs.db
 
+# Agentic instructions
+AGENTS.md
+
 # Editor and local configuration
 .vscode/*
 !.vscode/extensions.json
@@ -30,4 +32,5 @@ Thumbs.db
 build/
 dist/
 htmlcov/
+scripts/
 .coverage
