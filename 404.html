@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Andres Baravalle | web, data and security | senior data engineering manager @ Kubrick Group">
+    <title>Dr Andres Baravalle | Technical Data Leader</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+    <style>
+        :root {
+            --pico-font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+            --pico-background-color: #0d1117;
+            --pico-color: #e6edf3;
+            --pico-muted-color: #8b949e;
+            --pico-muted-border-color: #30363d;
+            --pico-primary: #58a6ff;
+            --pico-primary-hover: #79c0ff;
+            --pico-font-size: 100%;
+            --pico-line-height: 1.6;
+        }
+
+        main.container {
+            max-width: 760px;
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+        }
+
+        /* Header layout with side profile image */
+        header.header-profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-content h1 {
+            margin-bottom: 0.25rem;
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--pico-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .credentials {
+            font-size: 0.9rem;
+            color: var(--pico-muted-color);
+            margin-bottom: 0;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--pico-muted-border-color);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 576px) {
+            header.header-profile {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 1.25rem;
+            }
+
+            .profile-photo {
+                width: 96px;
+                height: 96px;
+            }
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--pico-muted-border-color);
+            margin: 2rem 0;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .links-list {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .links-list li {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--pico-primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--pico-primary-hover);
+            text-decoration: none;
+        }
+
+        /* Custom vector diamond list marker */
+        main section ul:not(.links-list) {
+            list-style-type: none;
+            /* Strip browser default disc/square */
+            padding-inline-start: 1.5rem;
+            margin-block: 0.75rem;
+        }
+
+        main section ul:not(.links-list) li {
+            position: relative;
+            padding-left: 0.5rem;
+            margin-bottom: 0.65rem;
+            line-height: 1.55;
+        }
+
+        main section ul:not(.links-list) li::marker {
+            content: ">";
+            position: absolute;
+            left: -1.25rem;
+            top: -0.05rem;
+            color: var(--pico-primary);
+            /* Uses slate-blue theme accent */
+            font-size: 0.85rem;
+        }
+
+        /* Horizontal links layout without markers */
+        ul.links-list {
+            display: flex;
+            gap: 1.25rem;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+        }
+
+        ul.links-list li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .network-icon {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+        }
+
+        ul.links-list a {
+            color: var(--pico-primary);
+            text-decoration: none;
+        }
+
+        ul.links-list a:hover .network-icon {
+            color: var(--pico-primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Icon wall for advised clients / delivery */
+        .icon-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1.25rem;
+            align-items: center;
+            justify-items: center;
+            width: 75%;
+            margin: 1rem auto 0 auto;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--pico-muted-border-color);
+            border-radius: 6px;
+        }
+
+        .icon-wall img {
+            max-width: 48px;
+            max-height: 48px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.2s ease;
+        }
+
+        .icon-wall img:hover {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header-profile">
+            <div class="header-content">
+                <h1>Dr Andres Baravalle</h1>
+                <p class="role-title">Senior Data Engineering Manager</p>
+                <p class="credentials">PhD, BSc (Hons) Maths &amp; Stats, CITP, RSS DSP, FHEA</p>
+            </div><a href="https://www.linkedin.com/in/baravalle/" rel="noopener noreferrer"><img
+                    src="assets/scaled/portrait.jpg" alt="Dr Andres Baravalle" class="profile-photo"></a>
+        </header>
+
+        <hr>
+
+        <section id="error-404" style="text-align: center; padding: 4rem 0;">
+            <h2 style="font-size: 3rem; margin-bottom: 0.5rem; color: var(--pico-primary);">404</h2>
+            <p style="font-size: 1.2rem; color: var(--pico-color);">Page Not Found</p>
+            <p style="color: var(--pico-muted-color); margin-bottom: 2rem;">
+                The page you are looking for doesn't exist or has been moved.
+            </p>
+            <a href="/" role="button">Return to Homepage</a>
+        </section>
+    </main>
+</body>
+
+</html>
