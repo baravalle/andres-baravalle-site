@@ -185,6 +185,34 @@
             color: var(--pico-primary-hover);
             transform: translateY(-1px);
         }
+
+        /* Icon wall for advised clients / delivery */
+        .icon-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1.25rem;
+            align-items: center;
+            justify-items: center;
+            width: 75%;
+            margin: 1rem auto 0 auto;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--pico-muted-border-color);
+            border-radius: 6px;
+        }
+
+        .icon-wall img {
+            max-width: 48px;
+            max-height: 48px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.2s ease;
+        }
+
+        .icon-wall img:hover {
+            transform: scale(1.08);
+        }
     </style>
 </head>
 
@@ -195,8 +223,8 @@
                 <h1>Dr Andres Baravalle</h1>
                 <p class="role-title">Senior Data Engineering Manager</p>
                 <p class="credentials">PhD, BSc (Hons) Maths &amp; Stats, CITP, RSS DSP, FHEA</p>
-            </div>
-            <img src="assets/portrait.jpg" alt="Dr Andres Baravalle" class="profile-photo">
+            </div><a href="https://www.linkedin.com/in/baravalle/" rel="noopener noreferrer"><img
+                    src="assets/scaled/portrait.jpg" alt="Dr Andres Baravalle" class="profile-photo"></a>
         </header>
 
         <hr>
@@ -231,6 +259,47 @@
 
         <hr>
 
+        <section id="consulting-delivery">
+            <h2>Consulting and delivery</h2>
+            <p>Selected organisations and clients I worked with across cloud architecture, web performance, data
+                platforms, and delivery:</p>
+            <div class="icon-wall" aria-label="Client and partner organisation logos">
+                <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank"
+                    rel="noopener noreferrer" aria-label="HM Revenue &amp; Customs">
+                    <img src="assets/scaled/hmrc.png" alt="HM Revenue &amp; Customs" title="HM Revenue &amp; Customs"
+                        loading="lazy">
+                </a>
+                <a href="https://www.metoffice.gov.uk/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Met Office">
+                    <img src="assets/scaled/met_office.png" alt="Met Office" title="Met Office" loading="lazy">
+                </a>
+                <a href="https://www.burberryplc.com/" target="_blank" rel="noopener noreferrer" aria-label="Burberry">
+                    <img src="assets/scaled/burberry.png" alt="Burberry" title="Burberry" loading="lazy">
+                </a>
+                <a href="https://www.skybettingandgaming.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Sky Betting &amp; Gaming">
+                    <img src="assets/scaled/skybet.png" alt="Sky Betting &amp; Gaming" title="Sky Betting &amp; Gaming"
+                        loading="lazy">
+                </a>
+                <a href="https://www.mandg.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="M&amp;G Investments">
+                    <img src="assets/scaled/mandg.png" alt="M&amp;G Investments" title="M&amp;G Investments"
+                        loading="lazy">
+                </a>
+                <!-- Arcadia Group is defunct -->
+                <img src="assets/scaled/arcadia.png" alt="Arcadia Group" title="Arcadia Group" loading="lazy">
+                <a href="https://www.microsoft.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Microsoft / MSN">
+                    <img src="assets/scaled/microsoft.png" alt="Microsoft / MSN" title="Microsoft / MSN" loading="lazy">
+                </a>
+                <a href="https://www.smau.it/" target="_blank" rel="noopener noreferrer" aria-label="SMAU">
+                    <img src="assets/scaled/smau.png" alt="SMAU" title="SMAU" loading="lazy">
+                </a>
+            </div>
+        </section>
+
+        <hr>
+
         <section id="talks">
             <h2>Selected talks</h2>
             <ul>
@@ -259,27 +328,28 @@
                 <li>
                     <a href="https://www.linkedin.com/in/baravalle/" rel="noopener noreferrer"
                         aria-label="LinkedIn profile" title="LinkedIn">
-                        <img src="assets/linkedin.png" alt="LinkedIn" class="network-icon" style="border-radius: 4px;">
+                        <img src="assets/scaled/linkedin.png" alt="LinkedIn" class="network-icon"
+                            style="border-radius: 4px;">
                     </a>
                 </li>
                 <li>
                     <a href="https://scholar.google.com/citations?user=zfsF39YAAAAJ" rel="noopener noreferrer"
                         aria-label="Google Scholar profile" title="Google Scholar">
-                        <img src="assets/scholar.png" alt="Google Scholar" class="network-icon"
+                        <img src="assets/scaled/scholar.png" alt="Google Scholar" class="network-icon"
                             style="border-radius: 4px;">
                     </a>
                 </li>
                 <li>
                     <a href="https://www.credential.net/profile/andresbaravalle/wallet" rel="noopener noreferrer"
                         aria-label="Databricks credentials" title="Databricks credentials">
-                        <img src="assets/accredible.png" alt="Databricks credentials" class="network-icon"
+                        <img src="assets/scaled/accredible.png" alt="Databricks credentials" class="network-icon"
                             style="border-radius: 4px;">
                     </a>
                 </li>
                 <li>
                     <a href="https://www.credly.com/users/andresbaravalle/badges" rel="noopener noreferrer"
                         aria-label="Akamai and security credentials" title="Akamai and security credentials">
-                        <img src="assets/credly.png" alt="Akamai and security credentials" class="network-icon"
+                        <img src="assets/scaled/credly.png" alt="Akamai and security credentials" class="network-icon"
                             style="border-radius: 4px;">
                     </a>
                 </li>
