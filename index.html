@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Personal site of Dr Andres Baravalle. Data engineering management, cloud platforms, and technical governance.">
+    <title>Dr Andres Baravalle | Technical Data Leader</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        :root {
+            --pico-background-color: #0d1117;
+            --pico-color: #e6edf3;
+            --pico-muted-color: #8b949e;
+            --pico-muted-border-color: #30363d;
+            --pico-primary: #58a6ff;
+            --pico-primary-hover: #79c0ff;
+            --pico-font-size: 100%;
+            --pico-line-height: 1.6;
+        }
+
+        main.container {
+            max-width: 760px;
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+        }
+
+        /* Header layout with side profile image */
+        header.header-profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-content h1 {
+            margin-bottom: 0.25rem;
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--pico-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .credentials {
+            font-size: 0.9rem;
+            color: var(--pico-muted-color);
+            margin-bottom: 0;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--pico-muted-border-color);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 576px) {
+            header.header-profile {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 1.25rem;
+            }
+
+            .profile-photo {
+                width: 96px;
+                height: 96px;
+            }
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--pico-muted-border-color);
+            margin: 2rem 0;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .links-list {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .links-list li {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--pico-primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--pico-primary-hover);
+            text-decoration: none;
+        }
+
+        /* Custom vector diamond list marker */
+        main section ul:not(.links-list) {
+            list-style-type: none;
+            /* Strip browser default disc/square */
+            padding-inline-start: 1.5rem;
+            margin-block: 0.75rem;
+        }
+
+        main section ul:not(.links-list) li {
+            position: relative;
+            padding-left: 0.5rem;
+            margin-bottom: 0.65rem;
+            line-height: 1.55;
+        }
+
+        main section ul:not(.links-list) li::marker {
+            content: "❖";
+            position: absolute;
+            left: -1.25rem;
+            top: -0.05rem;
+            color: var(--pico-primary);
+            /* Uses slate-blue theme accent */
+            font-size: 0.85rem;
+        }
+
+        /* Horizontal links layout without markers */
+        /* ul.links-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0 1.25rem 0;
+            margin: 1rem 0 0;
+        }
+
+        ul.links-list li {
+            margin: 0;
+            padding: 0;
+            list-style-type: disc;
+        }
+
+        ul.links-list li::before {
+            content: none;
+        } */
+        ul.links-list {
+            display: flex;
+            gap: 1.25rem;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+        }
+
+        ul.links-list li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .network-icon {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+        }
+
+        ul.links-list a {
+            color: var(--pico-primary);
+            text-decoration: none;
+        }
+
+        ul.links-list a:hover .network-icon {
+            color: var(--pico-primary-hover);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header-profile">
+            <div class="header-content">
+                <h1>Dr Andres Baravalle</h1>
+                <p class="role-title">Senior Data Engineering Manager</p>
+                <p class="credentials">PhD, BSc (Hons) Maths &amp; Stats, CITP, RSS DSP, FHEA</p>
+            </div>
+            <img src="assets/portrait.jpg" alt="Dr Andres Baravalle" class="profile-photo">
+        </header>
+
+        <hr>
+
+        <section id="profile">
+            <h2>Profile</h2>
+            <p>
+                Technical data leader with a track record of building teams, platforms, and practices from the ground
+                up.
+                Operating at the intersection of web, data, and security, I specialise in building data products with
+                clear
+                commercial value - from price intelligence to product analytics and data governance.
+            </p>
+            <p>
+                I combine technical leadership in engineering and product with the ability to support commercial
+                strategies.
+                My practice is backed by Chartered IT Professional (CITP) and Data Science Professional (DSP) status,
+                alongside certifications including Databricks Data Engineer Professional, CISA, and CISSP.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="appointments">
+            <h2>Current appointments</h2>
+            <ul>
+                <li><strong>Kubrick Group:</strong> Senior Manager (Data Engineering) - leading client enterprise
+                    Databricks delivery programmes and shaping technical data architecture.</li>
+
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="talks">
+            <h2>Selected conference talks</h2>
+            <ul>
+                <li>
+                    <strong>When the Data You Scraped Might Be the Data They Wanted You to See</strong><br>
+                    Data Science Festival (May 2026) - Bot mitigation evasion, price discrimination mechanisms, and
+                    experimental validation.
+                </li>
+                <li>
+                    <strong>From Prototype to Production: A Brief History of a Data Project</strong><br>
+                    EARL Conference (October 2025) - Scaling enterprise price intelligence systems on Databricks from
+                    initial scripts to multi-million row pipelines.
+                </li>
+                <li>
+                    <strong>Modernising Data Analytics with Databricks</strong><br>
+                    Brighton Data Forum (September 2024) - Architectural lakehouse migrations and operationalising the
+                    medallion data design.
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- <section id="links">
+            <h2>Outreach and profiles</h2>
+            <ul class="links-list">
+                <li><a href="https://www.linkedin.com/in/baravalle/" rel="noopener noreferrer">LinkedIn</a>
+                </li>
+                <li><a href="https://scholar.google.com/citations?user=zfsF39YAAAAJ" rel="noopener noreferrer">Google
+                        Scholar</a></li>
+            </ul>
+        </section> -->
+        <section id="links">
+            <h2>Outreach and profiles</h2>
+            <ul class="links-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/baravalle/" rel="noopener noreferrer"
+                        aria-label="LinkedIn profile">
+                        <svg role="img" viewBox="0 0 24 24" class="network-icon" fill="currentColor">
+                            <title>LinkedIn</title>
+                            <path
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://scholar.google.com/citations?user=zfsF39YAAAAJ" rel="noopener noreferrer"
+                        aria-label="Google Scholar profile">
+                        <svg role="img" viewBox="0 0 24 24" class="network-icon" fill="currentColor">
+                            <title>Google Scholar</title>
+                            <path
+                                d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
