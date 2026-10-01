@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment files
+.env
+.env.*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor and local configuration
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Build and coverage output
+build/
+dist/
+htmlcov/
+.coverage
